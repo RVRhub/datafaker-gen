@@ -11,15 +11,17 @@ All configuration is in `output.yaml` file.
 ```bash
 sinks:
   bigquery:
-    batchsize: 1
-    project_id: empyrean-verve-359215
+    batchsize: 10
+    project_id: _project_id_
     dataset: datafaker
     table: users
-    service_account: /Users/rvr/repo/opensource/datafaker-gen/empyrean-verve-359215-905c3d30b09c.json
+    service_account: path_to_service_account.json
     create_table_if_not_exists: true
     max_outstanding_elements_count: 100
     max_outstanding_request_bytes: 10000
-````
+    keep_alive_time_in_seconds: 60
+    keep_alive_timeout_in_seconds: 60
+```
 
 ### Run
 
