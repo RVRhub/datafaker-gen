@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         java-version: [ 17, 21 ]
-        runs-on: [ runs-on: self-hosted ]
+        runs-on: [ self-hosted ]
     name: Jdk ${{ matrix.java-version }}, os ${{ matrix.runs-on }}
     runs-on: ${{ matrix.runs-on }}
     steps:
