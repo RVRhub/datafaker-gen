@@ -15,7 +15,7 @@
     <name>Datafaker : Gen : Examples : BigQuery</name>
 
     <properties>
-        <skipBigQueryTests>false</skipBigQueryTests>
+        <skipBigQueryIntegrationTests>false</skipBigQueryIntegrationTests>
     </properties>
     <dependencies>
         <dependency>
@@ -147,7 +147,9 @@
                 <configuration>
                     <useManifestOnlyJar>false</useManifestOnlyJar>
                     <argLine>${surefire.argline}</argLine>
-                    <skipTests>${skipBigQueryTests}</skipTests>
+                    <excludes>
+                        <exclude>**/BigQuerySinkIntegrationTest.java</exclude>
+                    </excludes>
                 </configuration>
                 <executions>
                     <execution>
@@ -155,6 +157,16 @@
                         <goals>
                             <goal>test</goal>
                         </goals>
+                        <phase>integration-test</phase>
+                        <configuration>
+                            <excludes>
+                                <exclude>none</exclude>
+                            </excludes>
+                            <skipTests>${skipBigQueryIntegrationTests}</skipTests>
+                            <includes>
+                                <include>**/BigQuerySinkIntegrationTest.java</include>
+                            </includes>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

@@ -2,7 +2,7 @@ package net.datafaker.datafaker_gen.sink;
 
 import org.junit.jupiter.api.Test;
 
-import static net.datafaker.datafaker_gen.sink.BigQueryConnectionConfigurationTest.getConfig;
+import static net.datafaker.datafaker_gen.sink.BigQuerySinkIntegrationTest.getConfig;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class BigQuerySinkTest {

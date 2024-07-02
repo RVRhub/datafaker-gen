@@ -8,7 +8,7 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class BigQueryConnectionConfigurationTest {
+class BigQuerySinkIntegrationTest {
 
     @Test
     void testCreateBigQueryConnectionConfigurationFromConfig() {
