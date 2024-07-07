@@ -30,4 +30,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: ./mvnw $mvn_options clean verify --file pom.xml
+        run: ./mvnw $mvn_options verify --file pom.xml
